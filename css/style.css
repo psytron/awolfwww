@@ -1,0 +1,205 @@
+/* Inter Font Face Declaration */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+    src: url('../fonts/inter-variable.woff2') format('woff2'),
+         url('../fonts/inter-variable.woff') format('woff');
+}
+
+/* Apply Inter font to entire document */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: white;
+    margin: 0;
+}
+
+/* Site Header */
+.site-header {
+    background-color: white;
+    padding: 20px 0;
+    border-bottom: none;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-brand {
+    padding: 0;
+    margin: 0;
+}
+
+.logo-img {
+    height: 150px;
+    width: auto;
+    max-width: 600px;
+}
+
+/* Hero Section */
+.hero-section {
+    background: white;
+    color: #333;
+    padding: 50px 0;
+    min-height: 40vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-section h1 {
+    color: #333;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.hero-section .lead {
+    color: #666;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.hero-section .btn-primary {
+    background-color: #667eea;
+    color: white;
+    border: none;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #5568d3;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+.features-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.feature-card {
+    background: white;
+    padding: 30px 24px;
+    border-radius: 0;
+    box-shadow: none;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.feature-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.feature-icon {
+    color: #667eea;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.features-section .row > [class*="col-"] {
+    padding-left: 0;
+}
+
+.feature-image {
+    width: 100px;
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    border: 1px solid #718096;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.feature-heading {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #2d3748;
+    margin-bottom: 1rem;
+}
+
+.feature-text {
+    color: #718096;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .site-header {
+        padding: 15px 0;
+    }
+
+    .logo-img {
+        height: 120px;
+    }
+
+    .hero-section {
+        padding: 30px 0;
+        min-height: 35vh;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section .lead {
+        font-size: 1.1rem;
+    }
+
+    .features-section {
+        padding: 60px 0;
+    }
+
+    .feature-card {
+        padding: 30px 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Ensure columns stack vertically on mobile */
+    .features-section .row {
+        flex-wrap: wrap;
+    }
+
+    .features-section .col-12 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-img {
+        height: 105px;
+    }
+
+    .hero-section h1 {
+        font-size: 2rem;
+    }
+
+    .features-section .col-12 {
+        flex: 0 0 90%;
+        max-width: 90%;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Keep page edges aligned */
+.site-header .container,
+.features-section .container {
+    max-width: 1140px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
